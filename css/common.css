@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* 초기화 */
+h1,h2,h3,p,ul { margin:0; padding:0;}
+li {list-style:none;}
+a { text-decoration: none;}
+address { font-style: normal; }
+small {font-size: 1em; }
+.hidden { position:absolute; left:-9999px; }
+/* 웹폰트 */
+body { font-family: 'Noto Sans KR', sans-serif;
+    background: linear-gradient(180deg, #6ed6ed 0%, #fff 300px) no-repeat;}
+#wrap { width:960px; margin: 8px auto 0; 
+    border: 1px solid gray; background:#fff; }
+#mainHeader { margin: 0 auto; height: 279px; 
+    background: url(../images/bg_header.png) no-repeat;
+    color: yellow; padding: 30px 0 0 20px; font-size: 60px;
+    box-sizing: border-box; }
+#nav ul {overflow:hidden ; }
+#nav ul li { width: 25%; float:left; }
+#nav ul li a { display: block;  height: 60px; background: green;
+    text-align: center; line-height: 60px; color:#fff; }
+#nav ul li a:hover { color: yellow; background: #000; } 
+/* main */
+main { width: 740px; float:left; }
+#content { padding: 20px;}
+#content h3 { margin: 21px 0; }
+#content p { margin-bottom:15px; line-height: 18px; }
+/* 포터 */
+#photo { width: 220px; float:right; background-color:rgb(179, 255, 149);
+    padding: 20px 0; text-align: center; }
+/* footer */
+#footer { padding: 20px 0; text-align: center; clear:both; color:#fff;
+    background: #0b1625; text-align: center; line-height: 30px; }
+/* 미디어쿼리 */
+@media all and (max-width: 1023px) {
+/* 초기화 */
+#wrap { width:580px;}
+main  { width:auto; float:none; }
+/* 포터 */
+#photo { width: auto; float:none;}
+#photo img { width: 176px; }
+}
+@media all and (max-width: 599px){
+    body{background:none; }
+    #wrap{ width: 100%; margin: 0; border: 0; }
+    #mainHeader { height: 85px; background: rgb(2, 5, 41); }
+    #mainHeader h1 { padding-top:10px; font-size: 40px;}
+    #nav { }
+    #nav ul { }
+    #nav ul li { width: 100%; float:none; padding:15px 20px 20px 0; }
+    #nav ul li a { border:1px solid #ccc; border-radius:10px; line-height:40px; 
+        background: #fff; color: rgb(87, 87, 87);}
+    #photo { width: auto; float:none;}
+    #photo img { width: 176px;}
+}
